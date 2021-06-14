@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
+import { lightGreen, pink } from "@material-ui/core/colors";
+import Todos from "./components/Todos/Todos";
 
-function App() {
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: lightGreen[400],
+      main: lightGreen[500],
+      dark: lightGreen[600],
+    },
+    secondary: {
+      light: pink[400],
+      main: pink[500],
+      dark: pink[600],
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 977,
+      lg: 1173,
+      xl: 1589,
+      xxl: 1901,
+    },
+  },
+  // typography: {
+  //   useNextVariants: true,
+  // },
+});
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <Todos />
+    </MuiThemeProvider>
   );
-}
+};
 
 export default App;
