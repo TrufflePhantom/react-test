@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Todos from "./components/Todos/Todos";
+import App from "./App";
 
-ReactDOM.render(<Todos />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
