@@ -69,10 +69,7 @@ const Todos = () => {
     const newTodos = Array.from(todos);
     newTodos[newTodos.findIndex((item) => item.id === id)].text = newText;
     setTodos((prevState) => [...newTodos]);
-<<<<<<< HEAD
     console.log(newTodos);
-=======
->>>>>>> c76c181c36784d587ef92b48b75eac3ed7b1685f
   }
 
   function saveTodos() {
